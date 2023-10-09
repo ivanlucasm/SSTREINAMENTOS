@@ -20,7 +20,7 @@ header img {
 body {
     background-image: 
          linear-gradient(
-               to top right, #000000, #1f1e1c
+               to top right, #f0d497, #130e05
          );
     /* font-family: 'Cinzel', serif, 'Montserrat', sans-serif; Fonte para todo o documento */
     /* font-family: 'Bebas Neue', sans-serif; */
@@ -73,7 +73,7 @@ body {
 }
 /* Estilos do menu */
 #menu {
-    background-color: #f3a536;
+    background-color: #e74c3c;
     text-align: left;
     padding: 10px;
 }
