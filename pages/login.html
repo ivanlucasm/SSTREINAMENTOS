@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/login.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form class="container" id="login-form">
+        <label for="uname"><b>Usuário</b></label>
+        <input type="text" placeholder="Insira o nome de usuário" name="uname" required>
+        <label for="psw"><b>Senha</b></label>
+        <input type="password" placeholder="Insira a senha" id="psw" name="psw" required>
+        <input type="submit" value="Login">
+
+        <div id="error-message" class="error"></div>
+    </form>
+
+    <script src="../javascript/scriptLogin.js"></script>
+</body>
+
+</html>

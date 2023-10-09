@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatibe" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../styles/alunos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+
+    <!-- <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png"> -->
+    <link rel="icon" href="../icons/favicon-32x32.png" sizes="32x32" type="image/png">
+
+
+    <title>SSTREINAMENTOS - ALUNOS </title>
+
+</head>
+
+<body>
+    <form>
+
+        <div>
+            <p>Nome do aluno: <input type="text" class="nomealuno" placeholder="Nome... "> </p>
+            <p>Categoria: <input type="text" class="categoria" placeholder="Atividade que ele realiza"> </p>
+            <p>Valor: <input type="number" class="Valor" placeholder="Valor"></p>
+            <p>Status: <select name="status" id="status" class="status">
+                    <option value="Pendente"> Pendente</option>
+                    <option value="Pago"> Pago</option>
+                </select> </p>
+
+            <button class="add" type="button" onclick="addData()"> Adicionar </button>
+            <button class="update" type="button">Editar</button>
+        </div>
+    </form>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="../javascript/script.js"></script>
+</body>
+
+</html>

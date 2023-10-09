@@ -1,0 +1,183 @@
+/* Importar fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Montserrat:wght@500;600&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+/* Estilos gerais da página */
+
+header {
+    width: 100%;
+    height: 170px; /* Altura fixa */
+    overflow: hidden;
+    position: relative;
+}
+
+header img {
+    width: 100%;
+    height: 100%; /* Altura 100% para preencher o cabeçalho */
+    object-fit: cover; /* Redimensionar a imagem para cobrir toda a área */
+}
+
+body {
+    background-image: 
+         linear-gradient(
+               to top right, #000000, #1f1e1c
+         );
+    /* font-family: 'Cinzel', serif, 'Montserrat', sans-serif; Fonte para todo o documento */
+    /* font-family: 'Bebas Neue', sans-serif; */
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+
+}
+
+.item {
+    position: absolute;
+    width: 400px;
+    text-align: justify;
+    background-color: none;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 110px);
+    top: 0;
+}
+
+#next, #prev{
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 50px;
+
+}
+
+#next{
+    left: unset;
+    right: 50px;
+
+}
+/* Estilos do menu */
+#menu {
+    background-color: #334b30;
+    text-align: left;
+    padding: 10px;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #e74c3c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease; /* Adiciona uma transição de cor de fundo suave */
+    font-weight: bold;
+}
+
+#menu ul li a:hover {
+    background-color: #f3a536; /* Muda a cor de fundo ao passar o mouse */
+}
+
+#login {
+    float: right; /* Alinha "Fazer Login" à direita */
+}
+
+
+
+/* Estilos do logo */
+#logo-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Estilos do conteúdo */
+#conteudo {
+    padding: 20px;
+}
+
+/* Estilos do carrossel de imagens */
+#carrossel {
+    width: 100%;
+    overflow: hidden;
+    max-height: 1000px;
+    position: relative;
+}
+
+#carrossel ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300%;
+    animation: none;
+}
+
+#carrossel ul li {
+    width: 33.33%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#carrossel ul li img {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+}
+
+
+
+
+/* Estilos do rodapé */
+footer {
+    background-color: #e74c3c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Estilo de link para o rodapé, se necessário */
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
