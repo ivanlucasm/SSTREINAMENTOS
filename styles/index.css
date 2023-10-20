@@ -174,7 +174,7 @@ body {
     margin: 0;
     padding: 0;
     width: 300%;
-    animation: none;
+    height: 100%;
 }
 
 #carrossel ul li {
@@ -187,6 +187,21 @@ body {
 
 #carrossel ul li img {
     max-width: 80%;
+    max-height: auto;
+    cursor: pointer;
+}
+
+.carrossel2 ul li{
+    width: 100%;
+    float: left;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.carrossel2 ul li img {
+    max-width: 100%;
     max-height: auto;
     cursor: pointer;
 }
