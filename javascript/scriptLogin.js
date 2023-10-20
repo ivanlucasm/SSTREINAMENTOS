@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
             if (authenticatedUser) {
                 console.log("Usuário autenticado ", authenticatedUser);
-                window.location.href = "./Alunos.html";
+                window.location.href = "./MenuAdministrador.html";
                 
                 errorContainer.style.display = "none";
     
