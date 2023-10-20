@@ -156,47 +156,6 @@ body {
     justify-content: center;
 }
 
-.slider {
-    position: relative;
-    width: 100%;
-    height: 800px;
-    overflow: hidden;
-
-}
-
-.item {
-    position: absolute;
-    width: 400px;
-    text-align: justify;
-    background-color: none;
-    border-radius: 10px;
-    padding: 20px;
-    transition: 0.5s;
-    left: calc(50% - 110px);
-    top: 0;
-}
-
-#next,
-#prev {
-    position: absolute;
-    top: 40%;
-    color: #fff;
-    background-color: transparent;
-    border: none;
-    font-size: xxx-large;
-    font-family: monospace;
-    font-weight: bold;
-    left: 50px;
-
-}
-
-#next {
-    left: unset;
-    right: 50px;
-
-}
-
-
 /* Estilos do conteúdo */
 #conteudo {
     padding: 20px;
