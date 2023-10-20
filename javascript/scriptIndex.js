@@ -13,8 +13,6 @@ const images = document.querySelectorAll('#carrossel img');
 const totalImages = images.length;
 
 
-images[4].style.display = 'none';
-
 function changeImage() {
     images[index].style.display = 'none';
     index = (index + 1) % totalImages;
