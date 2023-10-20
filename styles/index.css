@@ -12,7 +12,7 @@
 
 
 header {
-    background-color: #e74c3c;
+    background-color: #e47569;
     box-shadow: 0px 3px 10px #f0d497;
 }
 
@@ -70,7 +70,7 @@ header {
 }
 
 .nav-list ul li a:hover {
-    background-color: #f3a536;
+    background-color: #f0d497;
     /* Muda a cor de fundo ao passar o mouse */
 }
 
@@ -227,7 +227,7 @@ body {
 
 /* Estilos do rodapé */
 footer {
-    background-color: #e74c3c;
+    background-color: #e47569;
     color: white;
     text-align: center;
     padding: 10px;
