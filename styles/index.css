@@ -2,6 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Montserrat:wght@500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+
+
+:root{
+    --cor-primaria: #F1EFEF; /*corpo*/
+    --cor-hover: #d6d4c7; /*Hover*/
+    --cor-terciaria: #191717; /*afins*/
+    --cor-secundaria: #7D7C7C; /*menus*/
+    
+
+}   
+
+
 /* Estilos gerais da página */
 
 * {
@@ -12,8 +25,9 @@
 
 
 header {
-    background-color: #e47569;
-    box-shadow: 0px 3px 10px #f0d497;
+    background-color: var(--cor-secundaria);
+    box-shadow: 0px 3px 10px var(--cor-primaria);
+    font-weight: bolder;
 }
 
 .nav-bar {
@@ -58,7 +72,7 @@ header {
 
 .login-button button {
     border: none;
-    background-color: #f0d497;
+    background-color: var(--cor-terciaria);
     padding: 10px;
     border-radius: 5px;
 }
@@ -70,7 +84,7 @@ header {
 }
 
 .nav-list ul li a:hover {
-    background-color: #f0d497;
+    background-color: var(--cor-hover);
     /* Muda a cor de fundo ao passar o mouse */
 }
 
@@ -133,9 +147,8 @@ header {
 }
 
 body {
-    background-image:
-        linear-gradient(to top right, #f0d497, #130e05);
-    color: #fff;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
     margin: 0;
     padding: 0;
     display: flex;
@@ -224,33 +237,6 @@ body {
     align-items: center;
 
 }
-
-/* Estilos do rodapé */
-footer {
-    background-color: #e47569;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 0;
-    font-weight: bold;
-}
-
-/* Estilo de link para o rodapé, se necessário */
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-
-}
-
 
 #mapa {
     width: 350px;
