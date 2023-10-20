@@ -2,9 +2,9 @@
 
 /* Estilo para o corpo (body) */
 body {
-    background-color: #ddd; /* Cor de fundo cinza claro */
+    background-color: #fff; /* Cor de fundo cinza claro */
     font-family: 'Cinzel', serif;
-    font-family: 'Montserrat', sans-serif; /* Fonte para todo o documento */
+    /* font-family: 'Montserrat', sans-serif; Fonte para todo o documento */
     margin: 0;
     padding: 0;
     position: relative;
@@ -105,5 +105,33 @@ td button.edit {
 td button.delete {
     background-color: #e74c3c; /* Vermelho */
     color: #fff;
+}
+
+.titulo__controle { 
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+}
+
+.menu__links {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu__links__navegacao {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 50%;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 15px 0;
+  color: #333;
+  border: 2px outset #ddd;
+  border-radius: 3px;
 }
 
