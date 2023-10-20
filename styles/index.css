@@ -3,65 +3,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
-
-
 :root{
     --cor-primaria: #F1EFEF; /*corpo*/
     --cor-hover: #d6d4c7; /*Hover*/
     --cor-terciaria: #191717; /*afins*/
     --cor-secundaria: #7D7C7C; /*menus*/
-    
-
 }   
-
-
 /* Estilos gerais da página */
-
 * {
     padding: 0;
     margin: 0;
     font-family: 'Comfortaa', cursive;
 }
-
-
 header {
     background-color: var(--cor-secundaria);
     box-shadow: 0px 3px 10px var(--cor-primaria);
     font-weight: bolder;
 }
-
 .nav-bar {
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 6rem;
 }
-
 .logo {
     display: flex;
     align-items: center;
 }
-
 .logo a {
     color: #fff;
 
 }
-
 .nav-list {
     display: flex;
     align-items: center;
 }
-
 .nav-list ul {
     display: flex;
     justify-content: center;
     list-style: none;
 }
-
-
 .nav-item {
     margin: 0 15px;
 }
-
 .nav-link {
     text-decoration: none;
     font-size: 1.15rem;
@@ -69,30 +52,24 @@ header {
     padding: 10px 20px;
     border-radius: 5px;
 }
-
 .login-button button {
     border: none;
     background-color: var(--cor-terciaria);
     padding: 10px;
     border-radius: 5px;
 }
-
 .login-button button a {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
 }
-
 .nav-list ul li a:hover {
     background-color: var(--cor-hover);
     /* Muda a cor de fundo ao passar o mouse */
 }
-
-
 .mobile-menu-icon {
     display: none;
 }
-
 .mobile-menu {
     display: none;
 }
@@ -101,46 +78,37 @@ header {
     .nav-bar {
         padding: 1.5rem 4rem;
     }
-
     .nav-item {
         display: none;
     }
-
     .login-button {
         display: none;
     }
-
     .mobile-menu-icon {
         display: block;
     }
-
     .mobile-menu-icon button {
         background-color: transparent;
         border: none;
         cursor: pointer;
     }
-
     .mobile-menu ul {
         display: flex;
         flex-direction: column;
         text-align: center;
         padding-bottom: 1rem;
     }
-
     .mobile-menu .nav-item {
         display: block;
         padding-top: 1.2rem;
     }
-
     .mobile-menu .login-button {
         display: block;
         padding: 1rem 2rem;
     }
-
     .mobile-menu .login-button button {
         width: 100%;
     }
-
     .open {
         display: block;
     }
@@ -155,12 +123,10 @@ body {
     flex-direction: column;
     justify-content: center;
 }
-
 /* Estilos do conteúdo */
 #conteudo {
     padding: 20px;
 }
-
 /* Estilos do carrossel de imagens */
 #carrossel {
     width: 100%;
@@ -168,7 +134,6 @@ body {
     max-height: 1000px;
     position: relative;
 }
-
 #carrossel ul {
     list-style-type: none;
     margin: 0;
@@ -176,7 +141,6 @@ body {
     width: 300%;
     height: 100%;
 }
-
 #carrossel ul li {
     width: 33.33%;
     float: left;
@@ -184,13 +148,11 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 #carrossel ul li img {
     max-width: 80%;
     max-height: auto;
     cursor: pointer;
 }
-
 .carrossel2 ul li{
     width: 100%;
     float: left;
@@ -199,19 +161,16 @@ body {
     align-items: center;
     padding: 10px;
 }
-
 .carrossel2 ul li img {
     max-width: 100%;
     max-height: auto;
     cursor: pointer;
 }
-
 .informacoes {
     text-align: center;
     align-items: center;
 
 }
-
 #mapa {
     width: 350px;
     height: 350px;
@@ -220,14 +179,12 @@ body {
     border: 2px solid #000;
     border-radius: 3%;
 }
-
 #map-description {
     background-color: #000;
     padding: 0 9px;
     font-weight: bold;
     border-radius: 5%;
 }
-
 .apresentacao__links {
     flex-direction: column;
     display: flex;
@@ -235,7 +192,6 @@ body {
     align-items: center;
     gap: 32px;
 }
-
 .apresentacao__links__navegacao{
     display: flex;
     justify-content: center;
