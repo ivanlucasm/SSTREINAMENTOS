@@ -12,10 +12,14 @@ let index = 0;
 const images = document.querySelectorAll('#carrossel img');
 const totalImages = images.length;
 
+
+images[4].style.display = 'none';
+
 function changeImage() {
     images[index].style.display = 'none';
     index = (index + 1) % totalImages;
     images[index].style.display = 'block';
+    console.log(index);
 }
 
 setInterval(changeImage, 5000); // Altera a imagem a cada 5 segundos
