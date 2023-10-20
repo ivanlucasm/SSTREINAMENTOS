@@ -74,6 +74,8 @@ function changeImage2(){
     images2[index2].style.display = 'none';
     index2 = (index2 + 1 ) % totalImages2;
     images2[index2].style.display = 'block';
+
 }
+
 
 setInterval(changeImage2, 5000);
