@@ -253,3 +253,26 @@ body {
     font-weight: bold;
     border-radius: 5%;
 }
+
+.apresentacao__links {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__navegacao{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 50%;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 15px 0;
+    color: var(--cor-terciaria);
+    border: 2px dotted var(--cor-secundaria);
+}
+
