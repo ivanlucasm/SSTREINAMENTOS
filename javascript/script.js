@@ -33,7 +33,7 @@ async function addData() {
     } catch (error) {
         console.error("Erro ao enviar dados:", error);
         add.textContent = "Adicionar";
-        
+
     }
     form.reset();
     readData();
@@ -68,6 +68,7 @@ async function readData() {
                     <td class="categoria">${each[2]}</td>
                     <td class="valor">${each[3]}</td>
                     <td class="status">${each[4]}</td>
+                    <td class="mes">${each[5]}</td>
                     <td class="action-cell">
                         <button class="edit" onclick="updateCell(this, ${each[0]})"><i class="fas fa-edit"></i></button>
                         <button class="delete" onclick="deleteData(${each[0]})"><i class="fas fa-trash-alt"></i></button>

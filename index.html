@@ -10,45 +10,66 @@
 </head>
 
 <body>
-
     <header>
-        <img src="./images/cabecalho.png" alt="Cabeçalho da Página">
-    </header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="index.html"> Logo<a>
+            </div>
 
-    <div id="menu">
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="pages/Informacoes.html">Informações</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScn1DNKewiaBZhZYkxj8C9ap1VyESjaI3FZQp2I-vDJ258vPg/viewform"
-                    target="_blank">Faça sua matrícula</a></li>
-            <li><a href="./pages/Contatos.html">Contatos </a></li>
-            <li id="login"><a href="./pages/login.html" target="_blank">Administrador</a></li>
-        </ul>
+            <div class="nav-list">
+
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/Informacoes.html">Informações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLScn1DNKewiaBZhZYkxj8C9ap1VyESjaI3FZQp2I-vDJ258vPg/viewform"
+                            target="_blank">Faça sua matrícula</a></li>
+                    <li  class="nav-item"><a class="nav-link" href="./pages/Contatos.html">Contatos </a></li>
+            </div>
+
+            <div class="login-button">
+                <button><a href="./pages/login.html" target="_blank">Entrar</a></li></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="./icons/menu-hamburguer32x.png"></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/Informacoes.html">Informações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLScn1DNKewiaBZhZYkxj8C9ap1VyESjaI3FZQp2I-vDJ258vPg/viewform"
+                            target="_blank">Faça sua matrícula</a></li>
+                    <li  class="nav-item"><a class="nav-link" href="./pages/Contatos.html">Contatos </a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="./pages/login.html" target="_blank">Entrar</a></li></button>
+            </div>
+        </div>
+    </header>
     </div>
 
     <div id="conteudo">
-        <h1>Bem-vindo à SS Treinamentos</h1>
-        <p>Aqui você encontrará informações incríveis referente a academia de Cross-Fit, Musculação entre outras
-            modalidades.</p>
+        <h1 style="text-align: center;">Bem-vindo à SS Treinamentos</h1>
+        <br/>
+        <p style="text-align: center;">Aqui você encontrará informações incríveis referente a academia com Cross-Trainning, Musculação entre outras modalidades. Temos um espaço reservado especiamente para você! Confira... </p>
     </div>
 
     <div id="carrossel">
         <ul>
-            <li><img src="./images/imagem1.jpg" alt="Imagem 1"></li>
-            <li><img src="./images/1.jpg" alt="Imagem 2"></li>
-            <li><img src="./images/imagem4.jpg" alt="Imagem 4"></li>
-            <li><img src="./images/3.jpg" alt="Imagem 5"></li>
+            <li><img src="./images/interior academia.jpeg" alt="Imagem 1"></li>
+            <li><img src="./images/anuncio1.jpeg" alt="Imagem 2"></li>
+            <li><img src="./images/anuncio2.jpeg" alt="Imagem 4"></li>
+            <li><img src="./images/anuncio3.jpeg" alt="Imagem 5"></li>
 
         </ul>
     </div>
-
-
-
-    <footer>
+    <!-- <footer>
         <p>Created by Developer Sourcer</p>
-    </footer>
+    </footer> -->
 
-    <script src="javascript/scriptIndex.js"></script>
+    <script src="./javascript/scriptIndex.js"></script>
 </body>
 
 </html>

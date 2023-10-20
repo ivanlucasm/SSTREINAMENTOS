@@ -11,25 +11,63 @@
 
 <body>
     <header>
-        <img src="../images/cabecalho.png" alt="Cabeçalho da Página">
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="index.html"> Logo<a>
+            </div>
+
+            <div class="nav-list">
+
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Informacoes.html">Informações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLScn1DNKewiaBZhZYkxj8C9ap1VyESjaI3FZQp2I-vDJ258vPg/viewform"
+                            target="_blank">Faça sua matrícula</a></li>
+                    <li  class="nav-item"><a class="nav-link" href="./Contatos.html">Contatos </a></li>
+            </div>
+
+            <div class="login-button">
+                <button><a href="../pages/login.html" target="_blank">Entrar</a></li></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="../icons/menu-hamburguer32x.png"></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./Informacoes.html">Informações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLScn1DNKewiaBZhZYkxj8C9ap1VyESjaI3FZQp2I-vDJ258vPg/viewform"
+                            target="_blank">Faça sua matrícula</a></li>
+                    <li  class="nav-item"><a class="nav-link" href="./Contatos.html">Contatos </a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="../pages/login.html" target="_blank">Entrar</a></li></button>
+            </div>
+        </div>
     </header>
-
-    <div id="menu">
-        <ul>
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="pages/Informacoes.html">Informações</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScn1DNKewiaBZhZYkxj8C9ap1VyESjaI3FZQp2I-vDJ258vPg/viewform"
-                    target="_blank">Faça sua matrícula</a></li>
-            <li><a href="">Contatos</a></li>
-            <li id="login"><a href="./pages/Alunos.html" target="_blank">Administrador</a></li>
-        </ul>
-    </div>
-
+   
     <div id="conteudo">
         <p>Aqui está as informações referente a academia no geral.</p>
     </div>
 
+    <div id="mapa">
+        <div id="map-description">Localização</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d996.0600919532658!2d-59.96331150143726!3d-3.0300450609838943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c19622464eded%3A0xb56d2e8e32e18e19!2sSs%20Treinamentos!5e0!3m2!1spt-BR!2sbr!4v1697480046515!5m2!1spt-BR!2sbr" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+    </div>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero dolore expedita obcaecati esse numquam nobis nostrum dignissimos ipsa saepe sunt voluptatum ratione repellat aperiam, ipsam, quas voluptatibus amet culpa labore.</p>    
+    </div>
+
+    <footer>
+        <p>Created by Developer Sourcer</p>
+    </footer>
+
+    <script src="../javascript/scriptIndex.js"></script>
 </body>
 
 </html>
