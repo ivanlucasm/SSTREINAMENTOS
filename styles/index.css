@@ -184,6 +184,7 @@ body {
     padding: 0 9px;
     font-weight: bold;
     border-radius: 5%;
+    color: #fff;
 }
 .apresentacao__links {
     flex-direction: column;
