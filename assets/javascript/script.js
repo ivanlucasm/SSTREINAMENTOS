@@ -35,7 +35,7 @@ async function addData() {
         add.textContent = "Adicionar";
 
     }
-    form.reset();
+    form.reset();   
     readData();
 }
 
