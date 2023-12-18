@@ -187,6 +187,7 @@ body {
     color: #fff;
 }
 .apresentacao__links {
+    padding: 3px;
     flex-direction: column;
     display: flex;
     justify-content: space-between;

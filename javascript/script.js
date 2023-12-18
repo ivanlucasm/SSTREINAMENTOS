@@ -1,4 +1,4 @@
-let api = "https://script.google.com/macros/s/AKfycbwvWE5KDQAS_q6BvOObwygNRPm9ng0MGW-k6BJEpJVd9jnYRdSSe8Kv3UT5vp58rSRsVw/exec";
+let api = "https://script.google.com/macros/s/AKfycbyLSLBtnKUSB23DXGDl5Z6rqp6l_uwN--6DTGW1VmVueWeCnl-BJGnA_llEU0Hk-tsO1g/exec";
 let form = document.querySelector("form");
 let add = document.querySelector(".add");
 let update = document.querySelector(".update");
@@ -6,13 +6,22 @@ let tbody = document.querySelector("tbody");
 
 
 
-async function addData() {
+
+async function adicionar() {
+
     add.textContent = "Adicionando... ";
     let obj = {
         nome: form[0].value,
-        categoria: form[1].value,
-        valor: form[2].value,
-        status: document.getElementById("status").value
+        dataNascimento: form[1].value,
+        endereco: form[2].value,
+        bairro: form[3].value,
+        cep: form[4].value,
+        cidade: form[5].value,
+        uf: form[6].value,
+        email: form[7].value,
+        telefone: form[8].value,
+        profissao: form[9].value,
+
     };
 
     try {
@@ -35,7 +44,7 @@ async function addData() {
         add.textContent = "Adicionar";
 
     }
-    form.reset();   
+    form.reset();
     readData();
 }
 
@@ -54,24 +63,51 @@ async function deleteData(id) {
     }
 }
 
+function formatarData(data, formato) {
+    const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    const dataFormatada = new Date(data).toLocaleString(undefined, options);
+
+    // Se um formato personalizado for fornecido, use-o
+    if (formato) {
+        const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+        const dia = dataFormatada.split(',')[0].trim().split('/')[0];
+        const mes = meses[parseInt(dataFormatada.split(',')[0].trim().split('/')[1]) - 1];
+        const ano = dataFormatada.split(',')[0].trim().split('/')[2];
+        const hora = dataFormatada.split(',')[1].trim();
+        return formato
+            .replace('dd', dia)
+            .replace('MMM', mes)
+            .replace('yyyy', ano)
+            .replace('HH:mm:ss', hora);
+    } else {
+        console.log('Data Invalida');
+    }
+
+    return dataFormatada;
+}
+
+
 async function readData() {
     try {
         const res = await fetch(api);
         const data = await res.json();
-
         let dados = data.dados;
         let trtd = dados.map(each => {
             return `
                 <tr>
-                    <td class="id">${each[0]}</td>
+                    <td class="id">${each[12]}</td>
                     <td class="nome">${each[1]}</td>
-                    <td class="categoria">${each[2]}</td>
-                    <td class="valor">${each[3]}</td>
-                    <td class="status">${each[4]}</td>
-                    <td class="mes">${each[5]}</td>
+                    <td class="nascimento">${formatarData(each[2], 'dd MMM yyyy')}</td>
+                    <td class="endereco">${each[3]}</td>
+                    <td class="bairro">${each[4]}</td>
+                    <td class="cep"> ${each[5]}</td>
+                    <td class="cidade"> ${each[6]}</td>
+                    <td class="email"> ${each[8]}</td>
+                    <td class="telefone"> ${each[9]}</td>
+                    <td class="foto"><a href="${each[11]}" target="_blank">${each[11]}</a></td>
                     <td class="action-cell">
-                        <button class="edit" onclick="updateCell(this, ${each[0]})"><i class="fas fa-edit"></i></button>
-                        <button class="delete" onclick="deleteData(${each[0]})"><i class="fas fa-trash-alt"></i></button>
+                        <button class="edit" onclick="updateCell(this, ${each[13]})"><i class="fas fa-edit"></i></button>
+                        <button class="delete" onclick="deleteData(${each[13]})"><i class="fas fa-trash-alt"></i></button>
                     </td>
                 </tr>
                 `
@@ -87,9 +123,6 @@ async function updateCell(elm, id) {
     update.style.display = "unset";
 
     let nome = elm.parentElement.querySelector(".nome").textContent;
-    let categoria = elm.parentElement.querySelector(".categoria").textContent;
-    let valor = elm.parentElement.querySelector(".valor").textContent;
-    let status = elm.parentElement.querySelector(".status").textContent;
 
     form[0].value = nome;
     form[1].value = categoria;
@@ -116,3 +149,39 @@ async function updateData(id) {
 
 readData();
 
+async function buscarEndereco(cep){
+
+    var mensagemErro = document.getElementById('erro')
+    mensagemErro.innerHTML = "";
+
+    try{
+        const consultaCEP = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+        var consultaCEPConvertida = await consultaCEP.json();
+
+        if(consultaCEP.erro){
+            throw Error('Cep não existe');
+        }
+        console.log(consultaCEPConvertida);
+
+        var cidade = document.getElementById('cidade');
+        var endereco = document.getElementById('endereco');
+        var bairro = document.getElementById('bairro');
+        var uf = document.getElementById('estado');
+
+        cidade.value = consultaCEPConvertida.localidade;
+        endereco.value = consultaCEPConvertida.logradouro;
+        bairro.value = consultaCEPConvertida.bairro;
+        uf.value = consultaCEPConvertida.uf;
+
+        console.log(consultaCEPConvertida);
+
+        return consultaCEPConvertida;
+
+    }catch(erro){
+        mensagemErro.innerHTML += `<p>CEP Invalido! Tente Novamente</p>`;
+        console.log(erro);
+    }
+}
+
+var cep = document.getElementById('cep');
+cep.addEventListener("focusout", () => buscarEndereco(cep.value));

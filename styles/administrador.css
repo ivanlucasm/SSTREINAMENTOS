@@ -24,6 +24,8 @@ body {
   /* Estilo para os campos de entrada (input) dentro do formulário */
   input[type="text"],
   input[type="number"],
+  input[type="date"],
+  input[type="email"],
   select {
     width: 100%;
     padding: 10px;
@@ -31,6 +33,16 @@ body {
     border: 1px solid #ddd; /* Borda cinza clara */
     border-radius: 5px;
   }
+
+  input[type="date"]::-webkit-clear-button {
+    display: none;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #333;
+    font-size: 14px;
+  }
+  
   /* Estilo para o botão "Adicionar" */
   button.add {
     background-color: #f3a536; /* Amarelo claro */
@@ -49,6 +61,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
+
   /* Estilo para a tabela */
   table {
     width: 100%;
@@ -56,13 +69,15 @@ body {
     margin-top: 20px;
     margin: 0 auto;
   }
+
   /* Estilo para as células da tabela */
   th, td {
-    padding: 10px;
+    padding: 15px;
     text-align: center;
   }
   /* Estilo para a linha de cabeçalho da tabela */
   thead {
+    width: 100%;
     background-color: #333; /* Fundo cinza escuro */
     color: white; /* Texto branco */
   }
@@ -73,10 +88,18 @@ body {
     cursor: pointer;
   }
   td.nome{
-    width: 500px;
+    width: 50px;
   }
-  td.status{
-    width: 600px;
+  td.email{
+    width: 20%;
+  }
+
+  td.foto{
+    font-size: 10px;
+  }
+
+  th, a{
+    text-decoration: none;
   }
   /* Estilo para a coluna de ações */
 td.action-cell {
@@ -89,6 +112,8 @@ td.action-cell div {
     flex-direction: column;
     align-items: center;
 }
+
+
 /* Estilo para os botões de ação */
 td button {
     padding: 5px 10px;
@@ -134,4 +159,3 @@ td button.delete {
   border: 2px outset #ddd;
   border-radius: 3px;
 }
-

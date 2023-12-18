@@ -22,15 +22,47 @@
     <form>
 
         <div>
-            <p>Nome do aluno: <input type="text" class="nomealuno" placeholder="Nome... "> </p>
-            <p>Categoria: <input type="text" class="categoria" placeholder="Atividade que ele realiza"> </p>
-            <p>Valor: <input type="number" class="Valor" placeholder="Valor"></p>
-            <p>Status: <select name="status" id="status" class="status">
-                    <option value="Pendente"> Pendente</option>
-                    <option value="Pago"> Pago</option>
-                </select> </p>
-
-            <button class="add" type="button" onclick="addData()"> Adicionar </button>
+            <p>Nome do aluno</p> <input type="text" class="nomealuno" placeholder="Nome... " required/> 
+            <p>Data de Nascimento<br> <input type="date" class="datanasc" placeholder="Data de Nascimento"> </p>
+            <p>CEP <input type="text"  id="cep" placeholder="Insira o CEP, gera os campos endereço e bairro automaticos"> </p>
+            <div id="erro"></div>
+            <p>Endereço <input type="text" class="endereco" id="endereco" placeholder="Insira o endereço, atenção somente ao número"></p>
+            <p>Bairro: <input id="bairro" class="bairro" type="text" placeholder="Insira o bairro"> </p>
+            <p>Cidade <input id="cidade" type="text" placeholder="Insira a Cidade"> </p>
+            <p>UF <select id="estado" name="estado" class="campo__escrita">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+                <option value="EX">Estrangeiro</option>
+            </select>
+            <p>Email <input type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required> </p>
+            <p>Telefone: <input type="text" placeholder="Insira o Telefone"></p>
+            <p>Profissão: <input type="text" placeholder="Insira a Profissão"></p>
+            <button class="add" type="button" onclick="adicionar()"> Adicionar </button>
             <button class="update" type="button">Editar</button>
         </div>
     </form>
@@ -39,12 +71,16 @@
         <table>
             <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Categoria</th>
-                    <th>Valor</th>
-                    <th>Status</th>
-                    <th>Mês</th>
+                    <th>Mat.</th>
+                    <th>Nome Completo</th>
+                    <th>Data de Nascimento</th>
+                    <th>Endereço</th>
+                    <th>Bairro</th>
+                    <th>CEP</th>
+                    <th>Cidade</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Foto</th>
                     <th>Ações</th>
                 </tr>
             </thead>
