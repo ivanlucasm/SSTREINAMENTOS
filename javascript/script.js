@@ -1,4 +1,4 @@
-let api = "https://script.google.com/macros/s/AKfycbyLSLBtnKUSB23DXGDl5Z6rqp6l_uwN--6DTGW1VmVueWeCnl-BJGnA_llEU0Hk-tsO1g/exec";
+let api = "https://script.google.com/macros/s/AKfycbyp2M4ZQkjNW9fPWhJ7JQfSWzUiatj_PB4PR189yhuayns083zr6iry4BXg2vZxvONcJQ/exec";
 let form = document.querySelector("form");
 let add = document.querySelector(".add");
 let update = document.querySelector(".update");
