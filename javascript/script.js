@@ -1,4 +1,4 @@
-let api = "https://script.google.com/macros/s/AKfycbyp2M4ZQkjNW9fPWhJ7JQfSWzUiatj_PB4PR189yhuayns083zr6iry4BXg2vZxvONcJQ/exec";
+let api = "https://script.google.com/macros/s/AKfycbyJBVAzbnyhEENbmvVoHA7GSrc4A6sFJnvz48sC5q0Dpq7CEPgdmpoHXLN1LKfRscbJnQ/exec";
 let form = document.querySelector("form");
 let add = document.querySelector(".add");
 let update = document.querySelector(".update");
@@ -13,9 +13,9 @@ async function adicionar() {
     let obj = {
         nome: form[0].value,
         dataNascimento: form[1].value,
-        endereco: form[2].value,
-        bairro: form[3].value,
-        cep: form[4].value,
+        endereco: form[3].value,
+        bairro: form[4].value,
+        cep: form[2].value,
         cidade: form[5].value,
         uf: form[6].value,
         email: form[7].value,
@@ -61,6 +61,7 @@ async function deleteData(id) {
     } catch (error) {
         console.error("Erro ao excluir dados:", error);
     }
+    readData();
 }
 
 function formatarData(data, formato) {
@@ -107,7 +108,7 @@ async function readData() {
                     <td class="foto"><a href="${each[11]}" target="_blank">${each[11]}</a></td>
                     <td class="action-cell">
                         <button class="edit" onclick="updateCell(this, ${each[13]})"><i class="fas fa-edit"></i></button>
-                        <button class="delete" onclick="deleteData(${each[13]})"><i class="fas fa-trash-alt"></i></button>
+                        <button class="delete" onclick="deleteData(${each[28]})"><i class="fas fa-trash-alt"></i></button>
                     </td>
                 </tr>
                 `
