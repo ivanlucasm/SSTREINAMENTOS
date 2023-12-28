@@ -84,7 +84,11 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Erro ao buscar dados:", error);
         }
 
-
+        $(document).ready(function () {
+            $('#alunosTable').DataTable({
+                "order": [[0, "desc"]] // Isso classificará a primeira coluna (índice 0) em ordem decrescente.
+            });
+        });
     }
 
     readData();
