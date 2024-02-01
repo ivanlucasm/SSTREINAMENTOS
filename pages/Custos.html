@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatibe" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../styles/administrador.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
+
+    <!-- <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png"> -->
+    <link rel="icon" href="../icons/favicon-32x32.png" sizes="32x32" type="image/png">
+
+
+    <title>SS - CUSTOS GERAIS </title>
+
+</head>
+
+<body>
+
+    <form>
+
+        <p>Descrição</p><input type="text" class="descricao" placeholder="Descrição custo">
+        <p>Tipo</p><select id="tipoCusto" name="tipoCusto" class="tipoCusti">
+            <option value="saida">Saída</option>
+            <option value="entrada">Entrada</option>
+            <option value="variáveis">Custos Variáveis</option>
+            <option value="investimento">Investimento de Venda</option>
+        </select>
+        <p>Valor</p><input type="number">
+        <p>Data do Pagamento</p><input type="date">
+        <p>Data do Vencimento</p><input type="date">
+
+
+        <button class="add" type="button" onclick="adicionar()"> Adicionar </button>
+        <button type="button" class="editar">Editar </button>
+
+    </form>
+
+    <div>
+        <table id="custosTable">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Descrição</th>
+                    <th>Tipo</th>
+                    <th>Data Pagamento</th>
+                    <th>Data Vencimento</th>
+                    <th>Valor</th>
+                    <!-- <th>Atualizar</th>
+                    <th>Deletar</th> -->
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <script src="../javascript/scriptCustos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+</body>
+
+</html>

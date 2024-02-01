@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function adicionar() {
 
         add.textContent = "Adicionando... ";
-        let obj = {
+        let objeto = {
             nome: form[0].value,
             dataNascimento: form[1].value,
             endereco: form[3].value,
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
             const response = await fetch(api, {
                 method: "POST",
-                body: JSON.stringify(obj)
+                body: JSON.stringify(objeto)
             });
 
             if (response.ok) {
