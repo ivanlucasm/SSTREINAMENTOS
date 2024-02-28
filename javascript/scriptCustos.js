@@ -1,29 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Função para filtrar a tabela com base no nome e na data
-    window.filterTable = function () {
-        var searchInput = document.getElementById("pesquisaNome").value.toLowerCase();
-        var dateInput = document.getElementById("pesquisaData").value;
 
-        var table = document.getElementById("custosTable");
-        var rows = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
-
-        for (var i = 0; i < rows.length; i++) {
-            var rowData = rows[i].getElementsByTagName("td");
-            var nome = rowData[1].textContent.toLowerCase();
-            var dataPagamento = rowData[8].textContent;
-
-            // Verificar se o nome contém o texto de pesquisa
-            // e se a data de pagamento corresponde à data filtrada
-            if (nome.includes(searchInput) && (dateInput === "" || moment(dataPagamento).isSame(dateInput, 'day'))) {
-                rows[i].style.display = "";
-            } else {
-                rows[i].style.display = "none";
-            }
-        }
-    };
-
-    let api = "https://script.google.com/macros/s/AKfycbwC77SRJuWx70oaAZk1dc52T_J0eWDIvMlfnRMd0zXWE25_u-hcrVwKrq9gnViBxt_a/exec";
+    let api = "https://script.google.com/macros/s/AKfycbxAL1ndxb0ubbekFu6lZPpwexTb7pY2v6dXOvHnkALh-cbP5_nO4uFeJ0niXZGDB-xJ/exec";
     let form = document.querySelector("form");
     let add = document.querySelector(".add");
     let update = document.querySelector(".update");
@@ -65,28 +43,28 @@ document.addEventListener("DOMContentLoaded", function () {
         readData();
     }
 
-    // function adicionar(){
-    //     add.textContent ="Adicionando..."
-    //     let objeto = { 
-    //         descricao: form[0].value,
-    //         tipo: form[1].value,
-    //         valor: form[2].value,
-    //         dataPagamento: form[3].value,
-    //         dataVencimento: form[4].value
-    //     };
+    function adicionar(){
+        add.textContent ="Adicionando..."
+        let objeto = { 
+            descricao: form[0].value,
+            tipo: form[1].value,
+            valor: form[2].value,
+            dataPagamento: form[3].value,
+            dataVencimento: form[4].value
+        };
 
-    // fetch(api,{
-    //     method: "POST",
-    //     body: JSON.stringify(obj)
-    // })
+    fetch(api,{
+        method: "POST",
+        body: JSON.stringify(obj)
+    })
 
-    //     .then(res => res.text())
-    //     .then(data =>{
-    //         alert(data)
-    //         add.textContent= "Adicionar"
-    //         form.reset();
-    //     });
-    // }
+        .then(res => res.text())
+        .then(data =>{
+            alert(data)
+            add.textContent= "Adicionar"
+            form.reset();
+        });
+    }
 
     function formatarData(data, formato) {
         const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
@@ -120,11 +98,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 return `
                 <tr>
                     <td class="item">${each[0]}</td>
-                    <td class="descricao">${each[2]}</td>
-                    <td class="tipo">${each[3]}</td>
+                    <td class="descricao">${each[1]}</td>
+                    <td class="tipo">${each[2]}</td>
                     <td class="valor">${each[3]}</td>
-                    <td class="dataVencimento">${formatarData(each[2], 'dd MMM yyyy')}</td>
-                    <td class="dataPagamento">${formatarData(each[2], 'dd MMM yyyy')}</td>
+                    <td class="dataVencimento">${formatarData(each[4], 'dd MMM yyyy')}</td>
+                    <td class="dataPagamento">${formatarData(each[5], 'dd MMM yyyy')}</td>
                     <td class="action-cell">
                         <button class="edit" onclick="updateCell(this, ${each[28]})"><i class="fas fa-edit"></i></button>
                         <button class="delete" onclick="deleteData(${each[28]})"><i class="fas fa-trash-alt"></i></button>
@@ -137,12 +115,10 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Erro ao buscar dados:", error);
         }
 
-        $(document).ready(function () {
-            $('#custosTable').DataTable({
-                "order": [[0, "desc"]] // Isso classificará a primeira coluna (índice 0) em ordem decrescente.
-            });
-        });
+        
     }
+
+   
 
     readData();
 });
