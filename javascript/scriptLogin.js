@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function checkUser(username, password) {
 
-       // let api = "https://script.google.com/macros/s/AKfycbz1S9yAuyQnxVj6Pg2VRDSxVw4Hv7QFyQsbpXB5xm2fRfaVxU2QUsdXPd1sU6qstxlWGQ/exec";
+       let api = "https://script.google.com/macros/s/AKfycbz1S9yAuyQnxVj6Pg2VRDSxVw4Hv7QFyQsbpXB5xm2fRfaVxU2QUsdXPd1sU6qstxlWGQ/exec";
     
         fetch(api)
         try {
