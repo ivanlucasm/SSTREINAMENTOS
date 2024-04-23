@@ -1,14 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-
-    let api = "https://script.google.com/macros/s/AKfycbxAL1ndxb0ubbekFu6lZPpwexTb7pY2v6dXOvHnkALh-cbP5_nO4uFeJ0niXZGDB-xJ/exec";
+    let api = "https://script.google.com/macros/s/AKfycbxmtVtRduQLd11XBCiJ077YPQqADW47hdCvmUMsV7kPtK8J8cjpTgJwuj0NHb12hBgZ/exec";
     let form = document.querySelector("form");
     let add = document.querySelector(".add");
     let update = document.querySelector(".update");
     let tbody = document.querySelector("tbody")
 
 
-    async function adicionar() {
+    async function adicionarCusto() {
 
         add.textContent = "Adicionando... ";
         let objeto = {
@@ -43,28 +40,23 @@ document.addEventListener("DOMContentLoaded", function () {
         readData();
     }
 
-    function adicionar(){
-        add.textContent ="Adicionando..."
-        let objeto = { 
-            descricao: form[0].value,
-            tipo: form[1].value,
-            valor: form[2].value,
-            dataPagamento: form[3].value,
-            dataVencimento: form[4].value
-        };
+    function filtrarPorIntervalo() {
+        var dataInicial = document.getElementById("filtroDataInicial").value;
+        var dataFinal = document.getElementById("filtroDataFinal").value;
 
-    fetch(api,{
-        method: "POST",
-        body: JSON.stringify(obj)
-    })
+        var table = $('#custosTable').DataTable();
 
-        .then(res => res.text())
-        .then(data =>{
-            alert(data)
-            add.textContent= "Adicionar"
-            form.reset();
-        });
+        // Formatando as datas para o formato esperado pelo DataTables (AAAA-MM-DD)
+        var dataInicialFormatada = dataInicial.split("-").reverse().join("-");
+        var dataFinalFormatada = dataFinal.split("-").reverse().join("-");
+
+        // Construindo o filtro com o intervalo de datas
+        var filtro = dataInicialFormatada + " to " + dataFinalFormatada;
+
+        table.columns(5).search(filtro, true, false).draw();
     }
+
+    
 
     function formatarData(data, formato) {
         const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
@@ -115,10 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Erro ao buscar dados:", error);
         }
 
-        
+
     }
 
-   
-
     readData();
-});

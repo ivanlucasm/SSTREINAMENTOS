@@ -26,6 +26,7 @@
 
     <form>
 
+
         <p>Descrição</p><input type="text" class="descricao" placeholder="Descrição custo">
         <p>Tipo</p><select id="tipoCusto" name="tipoCusto" class="tipoCusti">
             <option value="saida">Saída</option>
@@ -34,13 +35,13 @@
             <option value="investimento">Investimento de Venda</option>
             <option value="contasMes">Pagamento de Contas Mensais</option>
         </select>
-        <p>Valor</p><input type="number">
-        <p>Data do Pagamento</p><input type="date">
-        <p>Data do Vencimento</p><input type="date"/>
+        <p>Valor<input type="number"></p>
+        <p>Data do Pagamento<input type="date"></p>
+        <p>Data do Vencimento<input type="date"></p>
 
 
-        <button class="add" type="button" onclick="adicionar()"> Adicionar </button>
-        <button type="button" class="editar">Editar </button>
+        <button class="add" type="button" onclick="adicionarCusto()"> Adicionar </button>
+        <button type="button" class="update">Editar </button>
 
     </form>
 
@@ -51,9 +52,10 @@
                     <th>Item</th>
                     <th>Descrição</th>
                     <th>Tipo</th>
+                    <th>Valor</th>
                     <th>Data Pagamento</th>
                     <th>Data Vencimento</th>
-                    <th>Valor</th>
+                    <th>Ações</th>
                     <!-- <th>Atualizar</th>
                     <th>Deletar</th> -->
                 </tr>
@@ -64,10 +66,22 @@
             </tbody>
         </table>
     </div>
-    </div>
-    <script src="../javascript/scriptCustos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
+    <p>Vencimento</p>
+    <div class="date-fields">
+        <div>
+            <p>Data Inicial</p>
+            <input type="date" id="filtroDataInicial">
+        </div>
+        <div>
+            <p>Data Final</p>
+            <input type="date" id="filtroDataFinal">
+        </div>
+        <button class="filtrar" type="button" onclick="filtrarPorIntervalo()">Filtrar</button>
+    </div>
+    
+
+    <script src="../javascript/scriptCustos.js"></script>
 </body>
 
 </html>

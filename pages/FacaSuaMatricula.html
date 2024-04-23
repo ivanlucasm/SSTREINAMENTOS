@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatibe" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../styles/administrador.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
+    
+
+
+    <!-- <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png"> -->
+    <link rel="icon" href="../icons/favicon-32x32.png" sizes="32x32" type="image/png">
+
+
+    <title>SSTREINAMENTOS - Faça a sua matricuça </title>
+
+</head>
+
+<body>
+    <form>
+
+        <div>
+            <p>Nome do aluno</p> <input type="text" class="nomealuno" placeholder="Nome... " required />
+            <p>Data de Nascimento<br> <input type="date" class="datanasc" placeholder="Data de Nascimento"> </p>
+            <p>CEP <input type="text" id="cep" placeholder="Insira o CEP, gera os campos endereço e bairro automaticos">
+            </p>
+            <div id="erro"></div>
+            <p>Endereço <input type="text" class="endereco" id="endereco"
+                    placeholder="Insira o endereço, atenção somente ao número"></p>
+            <p>Bairro: <input id="bairro" class="bairro" type="text" placeholder="Insira o bairro"> </p>
+            <p>Cidade <input id="cidade" type="text" placeholder="Insira a Cidade"> </p>
+            <p>UF <select id="estado" name="estado" class="campo__escrita">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="EX">Estrangeiro</option>
+                </select>
+            <p>Email <input type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required> </p>
+            <p>Telefone: <input type="text" placeholder="Insira o Telefone"></p>
+            <p>Profissão: <input type="text" placeholder="Insira a Profissão"></p>
+            <button class="add" type="button" onclick="adicionar()"> Adicionar </button>
+            <button class="update" type="button">Editar</button>
+        </div>
+    </form>
+
+    <script src="../javascript/script.js"></script>
+</body>
+
+</html>

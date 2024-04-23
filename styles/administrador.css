@@ -2,137 +2,169 @@
 
 /* Estilo para o corpo (body) */
 body {
-    background-color: #fff; /* Cor de fundo cinza claro */
-    font-family: 'Cinzel', serif;
-    /* font-family: 'Montserrat', sans-serif; Fonte para todo o documento */
-    margin: 0;
-    padding: 0;
-    position: relative;
-  }
-  /* Estilo para o formulário */
-  form {
-    background-color: #fff; /* Fundo branco para o formulário */
-    padding: 20px;
-    border-radius: 10px; /* Cantos arredondados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  }
-  /* Estilo para os cabeçalhos (h3) dentro do formulário */
-  p {
-    color: #333; /* Cor do texto preto */
-    margin: 5px 0; /* Espaçamento superior e inferior */
-  }
-  /* Estilo para os campos de entrada (input) dentro do formulário */
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],
-  input[type="email"],
-  select {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ddd; /* Borda cinza clara */
-    border-radius: 5px;
-  }
-
-  input[type="date"]::-webkit-clear-button {
-    display: none;
-  }
-
-  input[type="date"]::-webkit-calendar-picker-indicator {
-    color: #333;
-    font-size: 14px;
-  }
-  
-  /* Estilo para o botão "Adicionar" */
-  button.add {
-    background-color: #f3a536; /* Amarelo claro */
-    color: white; /* Texto branco */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  /* Estilo para o botão "Editar" */
-  button.update {
-    background-color: #e74c3c; /* Vermelho claro */
-    color: white; /* Texto branco */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  /* Estilo para a tabela */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    margin: 0 auto;
-  }
-
-  /* Estilo para as células da tabela */
-  th, td {
-    padding: 15px;
-    text-align: center;
-  }
-  /* Estilo para a linha de cabeçalho da tabela */
-  thead {
-    width: 100%;
-    background-color: #333; /* Fundo cinza escuro */
-    color: white; /* Texto branco */
-  }
-  /* Estilo para as células da tabela com classe "update" */
-  td.update {
-    background-color: #e74c3c; /* Vermelho claro */
-    color: white; /* Texto branco */
-    cursor: pointer;
-  }
-  td.nome{
-    width: 50px;
-  }
-  td.email{
-    width: 20%;
-  }
-
-  td.foto{
-    font-size: 10px;
-  }
-
-  th, a{
-    text-decoration: none;
-  }
-  /* Estilo para a coluna de ações */
-td.action-cell {
-    text-align: center; /* Centralize os botões na célula */
-    max-width: 10px;
+  background-color: #fff;
+  /* Cor de fundo cinza claro */
+  font-family: 'Cinzel', serif;
+  /* font-family: 'Montserrat', sans-serif; Fonte para todo o documento */
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
+
+/* Estilo para o formulário */
+form {
+  background-color: #fff;
+  /* Fundo branco para o formulário */
+  padding: 20px;
+  border-radius: 10px;
+  /* Cantos arredondados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+}
+
+/* Estilo para os cabeçalhos (h3) dentro do formulário */
+p {
+  color: #333;
+  /* Cor do texto preto */
+  margin: 5px 0;
+  /* Espaçamento superior e inferior */
+}
+
+/* Estilo para os campos de entrada (input) dentro do formulário */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  /* Borda cinza clara */
+  border-radius: 5px;
+}
+
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #333;
+  font-size: 14px;
+}
+
+/* Estilo para o botão "Adicionar" */
+button.add {
+  background-color: #f3a536;
+  /* Amarelo claro */
+  color: white;
+  /* Texto branco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilo para o botão "Editar" */
+button.update {
+  background-color: #e74c3c;
+  /* Vermelho claro */
+  color: white;
+  /* Texto branco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilo para a tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+
+/* Estilo para as células da tabela */
+th,
+td {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Estilo para a linha de cabeçalho da tabela */
+thead {
+  width: 100%;
+  background-color: #333;
+  /* Fundo cinza escuro */
+  color: white;
+  /* Texto branco */
+}
+
+/* Estilo para as células da tabela com classe "update" */
+td.update {
+  background-color: #e74c3c;
+  /* Vermelho claro */
+  color: white;
+  /* Texto branco */
+  cursor: pointer;
+}
+
+td.nome {
+  width: 50px;
+}
+
+td.email {
+  width: 20%;
+}
+
+td.foto {
+  font-size: 10px;
+}
+
+th,
+a {
+  text-decoration: none;
+}
+
+/* Estilo para a coluna de ações */
+td.action-cell {
+  text-align: center;
+  /* Centralize os botões na célula */
+  max-width: 10px;
+}
+
 /* Estilo para o contêiner dos botões na coluna "Ações" */
 td.action-cell div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 /* Estilo para os botões de ação */
 td button {
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    margin-right: 5px;
-}
-/* Estilo para o botão "Editar" */
-td button.edit {
-    background-color: #f3a536; /* Azul */
-    color: #fff;
-}
-/* Estilo para o botão "Excluir" */
-td button.delete {
-    background-color: #e74c3c; /* Vermelho */
-    color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
 }
 
-.titulo__controle { 
+/* Estilo para o botão "Editar" */
+td button.edit {
+  background-color: #f3a536;
+  /* Azul */
+  color: #fff;
+}
+
+/* Estilo para o botão "Excluir" */
+td button.delete {
+  background-color: #e74c3c;
+  /* Vermelho */
+  color: #fff;
+}
+
+.titulo__controle {
   align-items: center;
   text-align: center;
   padding: 0px;
@@ -160,7 +192,9 @@ td button.delete {
   border-radius: 3px;
 }
 
-.lblCadastroAlunos, .lblControleAlunos, .lblControleCustos{
+.lblCadastroAlunos,
+.lblControleAlunos,
+.lblControleCustos {
   justify-content: center;
   font-size: 1.3rem;
   text-align: center;
@@ -168,5 +202,29 @@ td button.delete {
   margin: 0%;
   color: #5e5251;
   font-weight: bolder;
-  
+
+}
+
+.date-fields {
+  display: flex;
+  gap: 30px;
+  /* Espaçamento entre os campos */
+}
+
+.date-fields input[type="date"] {
+  width: 100%;
+  /* Define a largura dos campos */
+}
+
+.date-fields button {
+  margin-top: 35px;
+  /* Espaçamento entre os campos e o botão */
+}
+
+.filtrar {
+  background-color: #a36810;
+  /* Azul */
+  color: #fff;
+  font-weight: bolder;
+  padding: 10px;
 }

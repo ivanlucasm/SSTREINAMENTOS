@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // filterTable(); // Para carregar a tabela inicialmente
+   // filterTable(); // Para carregar a tabela inicialmente
 
     // Função para filtrar a tabela com base no nome e na data
     window.filterTable = function () {
@@ -221,5 +220,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     
-    
-});
